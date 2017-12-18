@@ -2,8 +2,8 @@
 A   CapitalT   class and methods that use the Cross class.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Kyle Brown.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -14,7 +14,7 @@ def main():
     #   Uncomment only 1 test at a time as you develop your code.
     # --------------------------------------------------------------
 
-    # run_test_simple_t()
+    run_test_simple_t()
     # run_test_set_colors()
     # run_test_move_by()
     # run_test_clone()
@@ -140,6 +140,11 @@ class CapitalT(object):
         #   Implement this method
         #   Note: you will need to also implement attach_to before testing
         # --------------------------------------------------------------
+
+        self.h_rect = rg.Rectangle(rg.Point((intersection_center.x - (width/2)), (intersection_center.y - (letter_thickness/2))), rg.Point((intersection_center.x + (width/2)), (intersection_center.y + (letter_thickness/2))))
+        self.v_rect = rg.Rectangle(rg.Point(intersection_center.x - (letter_thickness/2), self.h_rect.corner_1.y), rg.Point(intersection_center.x + (letter_thickness/2), self.h_rect.corner_1.y - height))
+
+
 
     def attach_to(self, window):
         """

@@ -280,11 +280,10 @@ class CapitalT(object):
         height = abs(self. v_rect.corner_2.y - self.v_rect.corner_1.y)
         thickness = abs(self.h_rect.corner_2.y - self.h_rect.corner_1.y)
 
-        T_clone = CapitalT(intersection, width, height, thickness)
+        t_clone = CapitalT(intersection, width, height, thickness)
+        t_clone.set_colors(self.h_rect.fill_color, self.h_rect.outline_color)
 
-
-        return T_clone
-
+        return t_clone
 
 
 # ----------------------------------------------------------------------
